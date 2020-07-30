@@ -26,4 +26,4 @@ pipeline:
        target: /test/drone
      when:
       branch: [ master ]
-      event: [ pull ]
+      event: [ push ]
