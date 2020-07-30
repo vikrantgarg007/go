@@ -12,3 +12,14 @@ pipeline:
     image: golang:latest
     commands:
       - go build
+      - ls -ltr
+  upload:
+     image: plugins/s3
+     settings:
+       bucket: swiggy-logging
+    access_key:
+      from_secret: aws_access_key_id
+    secret_key:
+      from_secret: aws_secret_access_key
+    source: .
+    target: /test
