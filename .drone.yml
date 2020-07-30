@@ -23,7 +23,7 @@ pipeline:
        secret_key:
           from_secret: aws_secret_key_id
        source: go
-       target: /test/
+       target: /test/drone
      when:
       branch: [ master ]
       event: [ pull ]
