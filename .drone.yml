@@ -24,8 +24,6 @@ pipeline:
           from_secret: aws_secret_key_id
        source: go
        target: /test/
-      when:
-        event:
-         - push
-        branch:
-         - master
+     when:
+      branch: [ master ]
+      event: [ pull ]
