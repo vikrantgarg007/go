@@ -16,7 +16,7 @@ pipeline:
   upload:
      image: plugins/s3
      settings:
-       bucket: swiggy-logging
+       bucket: locus-test-bucket
        region: ap-southeast-1
        access_key:
           from_secret: aws_access_key_id
@@ -24,3 +24,8 @@ pipeline:
           from_secret: aws_secret_key_id
        source: go
        target: /test/
+      when:
+        event:
+         - push
+        branch:
+         - master
