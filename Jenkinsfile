@@ -3,7 +3,7 @@ pipeline {
     stages {
     stage('Test') {
         steps {
-            sh 'echo "HelWorld"'
+            sh 'ecco "HlWorld"'
             sh '''
                 echo "Testing"
                 ls -lah
